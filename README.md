@@ -1,10 +1,10 @@
 # wireshark
 
-Interceptación del trafico SSL con Wirehark, con Pre Master Key Secret! 
+echo "Interceptación del trafico SSL con Wirehark, con Pre Master Key Secret! "
 
-Editamos .bashrc e incluimos al final del fichero
+echo "Editamos .bashrc e incluimos al final del fichero"
 
-vim .bashrc
+echo "export SSLKEYLOGFILE=/root/ssl-key.log" >> ~/.bashrc
 
 echo "Descifrar trafico SSL/TLS de Chrome con Wireshark"
 
