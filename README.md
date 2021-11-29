@@ -1,6 +1,6 @@
 # wireshark
 
-echo "Interceptación del trafico SSL con Wirehark, con Pre Master Key Secret! "
+echo "Interceptación del trafico SSL con Wirehark, con Pre Master Key Secret!"
 
 echo "Editamos .bashrc e incluimos al final del fichero"
 
