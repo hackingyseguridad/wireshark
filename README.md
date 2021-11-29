@@ -1,5 +1,7 @@
 # wireshark
 
+Interceptación del trafico SSL con Wirehark, con Pre Master Key Secret! 
+
 Editamos .bashrc e incluimos al final del fichero
 
 vim .bashrc
