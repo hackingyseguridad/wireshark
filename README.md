@@ -23,4 +23,4 @@ chromium --no-sandbox &
 wireshark
 
 
-<img style="float:left" alt="SSLKEYLOGFILE" src="https://github.com/hackingyseguridad/wireshark/blob/master/Pre_Master_Key2.png">
+<img style="float:left" alt="SSLKEYLOGFILE" src="https://github.com/hackingyseguridad/wireshark/blob/main/Pre_Master_Key2.png">
