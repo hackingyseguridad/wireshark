@@ -26,8 +26,12 @@ wireshark
 
 <img style="float:left" alt="Script" src="https://github.com/hackingyseguridad/wireshark/blob/main/Pre_Master_Key.png">
 
-# Wireshark versiñon 4.2.4
+# Wireshark version 4.2.4
 
 https://www.wireshark.org/
 
 <img style="float:left" alt="SSLKEYLOGFILE" src="https://github.com/hackingyseguridad/wireshark/blob/main/Pre_Master_Key2.png">
+
+# Extension navegador http-header live
+
+Pluging para interceptacion cifrado, extension navegador web: https://addons.mozilla.org/en-US/firefox/addon/http-header-live/
