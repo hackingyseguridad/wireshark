@@ -21,3 +21,6 @@ echo "claves SSL"; cat .ssl-key.log
 chromium --no-sandbox &
 
 wireshark
+
+
+<img style="float:left" alt="SSLKEYLOGFILE" src="https://github.com/hackingyseguridad/wireshark/blob/master/Pre_Master_Key2.png">
