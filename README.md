@@ -337,6 +337,6 @@ Como complemento a la interceptación por Wireshark, el repositorio recomienda l
 
 ---
 
-<p align="center">
-  <em>Repositorio mantenido por <a href="https://github.com/hackingyseguridad">hackingyseguridad</a> — con fines educativos y de análisis de red.</em>
-</p>
+#
+http://www.hackingyseguridad.com/
+#
