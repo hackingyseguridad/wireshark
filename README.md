@@ -1,4 +1,4 @@
-# 🦈 Interceptación y descifrado de tráfico TLS/SSL con Wireshark
+### Interceptación y descifrado de tráfico TLS/SSL con Wireshark
 
 > Guía práctica para capturar y descifrar tráfico HTTPS (TLS/SSL) generado por Google Chrome / Chromium usando **Wireshark** y la variable de entorno `SSLKEYLOGFILE`.
 
@@ -12,7 +12,7 @@
 
 ---
 
-## 📑 Tabla de contenidos
+### Tabla
 
 1. [¿Qué es esto?](#-qué-es-esto)
 2. [¿Cómo funciona?](#-cómo-funciona)
@@ -30,7 +30,7 @@
 
 ---
 
-## 🎯 ¿Qué es esto?
+### Descifrar TLS
 
 Este repositorio explica cómo **descifrar tráfico TLS/SSL propio** (por ejemplo, el generado por tu navegador Chrome/Chromium) directamente en Wireshark, sin necesidad de certificados falsos ni de un proxy MITM (Man-in-the-Middle).
 
@@ -48,7 +48,7 @@ Se apoya en una característica que incorporan los navegadores basados en Chromi
 
 ---
 
-## 🧠 ¿Cómo funciona?
+### Cómo funciona
 
 Cuando se establece una conexión TLS, el cliente y el servidor negocian una serie de claves de sesión efímeras a partir de una **Pre-Master Key** (o claves derivadas, según la versión de TLS). Estas claves son las que realmente cifran los datos de la sesión.
 
@@ -65,11 +65,11 @@ flowchart LR
     D -- descifra y muestra --> E[Tráfico HTTP en claro]
 ```
 
-> ⚠️ Esta técnica **no rompe** el cifrado TLS ni explota ninguna vulnerabilidad criptográfica: simplemente utiliza las claves de sesión que el propio proceso legítimo ya conoce y decide compartir con fines de depuración.
+>  Esta técnica **no rompe** el cifrado TLS ni explota ninguna vulnerabilidad criptográfica: simplemente utiliza las claves de sesión que el propio proceso legítimo ya conoce y decide compartir con fines de depuración.
 
 ---
 
-## ✅ Requisitos
+### Requisitos
 
 | Requisito | Descripción |
 |---|---|
@@ -82,7 +82,7 @@ flowchart LR
 
 ---
 
-## ⚙️ Instalación
+### Instalación
 
 ### 1. Instalar Wireshark
 
@@ -182,7 +182,7 @@ Wireshark descifrará automáticamente los paquetes TLS a medida que reconozca l
 
 ---
 
-## 🔧 Configuración de Wireshark
+### Configuración de Wireshark
 
 Sigue esta ruta dentro de la interfaz gráfica de Wireshark:
 
@@ -225,7 +225,7 @@ Tras aplicar los cambios, Wireshark releerá el fichero de claves de forma conti
 
 ---
 
-## 🔎 Filtros útiles en Wireshark
+### Filtros útiles en Wireshark
 
 Una vez configurado el descifrado, estos filtros ayudan a localizar rápidamente el tráfico de interés:
 
@@ -243,7 +243,7 @@ Una vez configurado el descifrado, estos filtros ayudan a localizar rápidamente
 
 ---
 
-## 🧩 Script auxiliar: `hex.sh`
+### Script : `hex.sh`
 
 El repositorio incluye una pequeña utilidad en Bash para convertir texto a formato hexadecimal, útil por ejemplo para comparar cadenas contra el contenido hexadecimal visible en Wireshark.
 
@@ -277,7 +277,7 @@ $ sh hex.sh hola
 
 ---
 
-## 🌐 Extensión de navegador: HTTP Header Live
+### Extensión de navegador: HTTP Header Live
 
 Como complemento a la interceptación por Wireshark, el repositorio recomienda la extensión **HTTP Header Live**, disponible para Firefox, que permite inspeccionar en tiempo real las cabeceras HTTP de las peticiones y respuestas directamente desde el navegador.
 
@@ -290,7 +290,7 @@ Como complemento a la interceptación por Wireshark, el repositorio recomienda l
 
 ---
 
-## 📋 Resumen de variables y rutas
+### Resumen de variables y rutas
 
 | Elemento | Valor / Ruta | Propósito |
 |---|---|---|
@@ -302,7 +302,7 @@ Como complemento a la interceptación por Wireshark, el repositorio recomienda l
 
 ---
 
-## 🛠️ Solución de problemas
+### Solución de problemas
 
 | Problema | Posible causa | Solución |
 |---|---|---|
@@ -315,7 +315,7 @@ Como complemento a la interceptación por Wireshark, el repositorio recomienda l
 
 ---
 
-## ⚖️ Buenas prácticas y advertencias legales
+### Buenas prácticas y advertencias legales
 
 - Esta técnica debe usarse **exclusivamente** sobre tráfico propio o en entornos de laboratorio/pruebas para los que se cuenta con autorización explícita.
 - Interceptar o descifrar tráfico de **terceros sin su consentimiento** puede constituir un delito según la legislación aplicable en tu país (por ejemplo, normativa de protección de comunicaciones y datos personales).
@@ -325,7 +325,7 @@ Como complemento a la interceptación por Wireshark, el repositorio recomienda l
 
 ---
 
-## 📚 Recursos y enlaces
+### Referencias
 
 | Recurso | Enlace |
 |---|---|
@@ -334,17 +334,6 @@ Como complemento a la interceptación por Wireshark, el repositorio recomienda l
 | Web del autor | <http://www.hackingyseguridad.com/> |
 | Documentación NSS Key Log Format | Buscar "NSS Key Log Format" en la documentación de Mozilla/Chromium |
 
-### Temas relacionados (topics del repositorio)
-
-`tls` · `ssl` · `chrome` · `wireshark` · `decrypt` · `sslkeylogfile` · `interceptacion` · `trafico` · `interceptar` · `descifrar`
-
-### Imágenes del repositorio
-
-| Fichero | Uso en esta guía |
-|---|---|
-| `index.jpeg` | Imagen de cabecera / portada del proyecto |
-| `Pre_Master_Key.png` | Captura de Wireshark descifrando tráfico TLS (Fig. 1) |
-| `Pre_Master_Key2.png` | Captura de la configuración del log de claves en Wireshark (Fig. 2) |
 
 ---
 
