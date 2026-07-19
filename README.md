@@ -6,6 +6,10 @@
 [![Shell](https://img.shields.io/badge/Shell-Bash-4EAA25?logo=gnubash&logoColor=white)]()
 [![Licencia](https://img.shields.io/badge/uso-educativo-orange)]()
 
+<p align="center">
+  <img src="https://github.com/hackingyseguridad/wireshark/raw/main/index.jpeg" alt="Interceptación de tráfico TLS/SSL con Wireshark" width="600">
+</p>
+
 ---
 
 ## 📑 Tabla de contenidos
@@ -168,6 +172,14 @@ wireshark
 
 Wireshark descifrará automáticamente los paquetes TLS a medida que reconozca las claves correspondientes en el log.
 
+<p align="center">
+  <a href="https://github.com/hackingyseguridad/wireshark/blob/main/Pre_Master_Key.png">
+    <img src="https://github.com/hackingyseguridad/wireshark/raw/main/Pre_Master_Key.png" alt="Captura de Wireshark mostrando la Pre-Master Key y el tráfico descifrado" width="750">
+  </a>
+  <br>
+  <em>Fig. 1 — Wireshark descifrando el tráfico TLS gracias a la Pre-Master Key exportada por Chromium.</em>
+</p>
+
 ---
 
 ## 🔧 Configuración de Wireshark
@@ -200,6 +212,14 @@ introduce la ruta absoluta del fichero de claves:
 | Efecto | Descifrado automático del tráfico TLS capturado que coincida con las claves del log |
 
 Tras aplicar los cambios, Wireshark releerá el fichero de claves de forma continua, por lo que no es necesario reiniciar la aplicación cada vez que se generen nuevas claves.
+
+<p align="center">
+  <a href="https://github.com/hackingyseguridad/wireshark/blob/main/Pre_Master_Key2.png">
+    <img src="https://github.com/hackingyseguridad/wireshark/raw/main/Pre_Master_Key2.png" alt="Configuración del campo SSLKEYLOGFILE en las preferencias TLS de Wireshark" width="750">
+  </a>
+  <br>
+  <em>Fig. 2 — Campo "(Pre)-Master-Secret log filename" apuntando al fichero de claves en Edit → Preferences → Protocols → TLS.</em>
+</p>
 
 **Referencia oficial de Wireshark:** <https://www.wireshark.org/>
 
@@ -317,6 +337,14 @@ Como complemento a la interceptación por Wireshark, el repositorio recomienda l
 ### Temas relacionados (topics del repositorio)
 
 `tls` · `ssl` · `chrome` · `wireshark` · `decrypt` · `sslkeylogfile` · `interceptacion` · `trafico` · `interceptar` · `descifrar`
+
+### Imágenes del repositorio
+
+| Fichero | Uso en esta guía |
+|---|---|
+| `index.jpeg` | Imagen de cabecera / portada del proyecto |
+| `Pre_Master_Key.png` | Captura de Wireshark descifrando tráfico TLS (Fig. 1) |
+| `Pre_Master_Key2.png` | Captura de la configuración del log de claves en Wireshark (Fig. 2) |
 
 ---
 
